@@ -1,0 +1,23 @@
+name: my first flow
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  my-first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Run a one-line script
+        run: echo "Hello, World!"
+
+  my-second-job:
+    runs-on: ubuntu-latest
+    needs: my-first-job
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Run a one-line script
+        run: echo "This is the second job!"
