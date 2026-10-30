@@ -1,8 +1,6 @@
 name: my first flow
-on:
-  push:
-    branches:
-      - main
+on: push
+
 jobs:
   my-first-job:
     runs-on: ubuntu-latest
