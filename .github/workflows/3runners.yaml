@@ -1,0 +1,28 @@
+name: 3understanding runners
+on:
+  push:
+    branches:
+      - main
+jobs:
+  my-first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print ubuntu runner information
+        run: |
+          echo "Runner name: ${{ runner.name }}"
+          echo "Runner OS: ${{ runner.os }}"
+          echo "Runner architecture: ${{ runner.arch }}"
+          echo "Runner temporary directory: ${{ runner.temp }}"
+          echo "Runner workspace directory: ${{ runner.workspace }}"
+
+  my-second-job:
+    runs-on: windows-latest
+    steps:
+      - name: print windowsrunner information
+        shell: bash
+        run: |
+          echo "Runner name: ${{ runner.name }}"
+          echo "Runner OS: ${{ runner.os }}"
+          echo "Runner architecture: ${{ runner.arch }}"
+          echo "Runner temporary directory: ${{ runner.temp }}"
+          echo "Runner workspace directory: ${{ runner.workspace }}"

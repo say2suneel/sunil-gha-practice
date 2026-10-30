@@ -1,4 +1,4 @@
-name: Work flow Dispatch
+name: 2Work flow Dispatch
 on:
   workflow_dispatch:
     inputs:

@@ -1,4 +1,4 @@
-name: my first flow
+name: 1my first flow
 on:
   push:
     branches:
