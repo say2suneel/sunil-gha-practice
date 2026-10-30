@@ -1,4 +1,4 @@
-name: my first flow
+name: Work flow Dispatch
 on:
   workflow_dispatch:
     inputs:
